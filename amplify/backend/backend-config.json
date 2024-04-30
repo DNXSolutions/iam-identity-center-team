@@ -352,6 +352,12 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "teamupdateEligibility": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "hosting": {
@@ -455,6 +461,22 @@
         {
           "category": "function",
           "resourceName": "teamgetAccounts"
+        }
+      ]
+    },
+    "AMPLIFY_function_teamgetEntitlement_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamgetEntitlement"
+        }
+      ]
+    },
+    "AMPLIFY_function_teamgetEntitlement_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamgetEntitlement"
         }
       ]
     },
@@ -570,6 +592,22 @@
         }
       ]
     },
+    "AMPLIFY_function_teamgetUserPolicy_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamgetUserPolicy"
+        }
+      ]
+    },
+    "AMPLIFY_function_teamgetUserPolicy_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamgetUserPolicy"
+        }
+      ]
+    },
     "AMPLIFY_function_teamgetUsers_deploymentBucketName": {
       "usedBy": [
         {
@@ -599,6 +637,62 @@
         {
           "category": "function",
           "resourceName": "teamqueryLogs"
+        }
+      ]
+    },
+    "AMPLIFY_function_teamupdateEligibility_accountId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamupdateEligibility"
+        }
+      ]
+    },
+    "AMPLIFY_function_teamupdateEligibility_apiTeamGraphqlapiendpointoutput": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamupdateEligibility"
+        }
+      ]
+    },
+    "AMPLIFY_function_teamupdateEligibility_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamupdateEligibility"
+        }
+      ]
+    },
+    "AMPLIFY_function_teamupdateEligibility_env": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamupdateEligibility"
+        }
+      ]
+    },
+    "AMPLIFY_function_teamupdateEligibility_policyTableName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamupdateEligibility"
+        }
+      ]
+    },
+    "AMPLIFY_function_teamupdateEligibility_region": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamupdateEligibility"
+        }
+      ]
+    },
+    "AMPLIFY_function_teamupdateEligibility_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "teamupdateEligibility"
         }
       ]
     },

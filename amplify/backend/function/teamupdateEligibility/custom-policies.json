@@ -1,0 +1,13 @@
+[
+  {
+    "Action": [
+      "sso:ListPermissionSets",
+      "sso:DescribePermissionSet",
+      "dynamodb:GetItem",
+      "dynamodb:UpdateItem"
+    ],
+    "Resource": [
+      "*"
+    ]
+  }
+]

@@ -263,7 +263,7 @@ def eligibility_error(request):
     updateRequest(input)
     
 def get_eligibility(request, userId):
-    eligible = False
+    eligible = True
     groupIds = [group['GroupId'] for group in list_idc_group_membership(userId)]
     entitlement = getEntitlements(userId=userId, groupIds=groupIds)
     print(entitlement)

@@ -68,12 +68,12 @@
             "Ref": "AWS::StackId"
         },
         "permissions": [],
-        "hostedUIDomainName": "d15m25y3d13nw8",
+        "hostedUIDomainName": "d16vqf4tyj50cd",
         "authProvidersUserPool": [],
         "hostedUIProviderMeta": "[]",
         "authProviders": [],
         "hostedUIProviderCreds": "[]",
         "adminQueryGroup": "Admin",
-        "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d15m25y3d13nw8.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.d15m25y3d13nw8.amplifyapp.com/\"]}"
+        "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://client-auth.dnx.one/\"],\"LogoutURLs\":[\"https://client-auth.dnx.one/\"]}"
     }
 }

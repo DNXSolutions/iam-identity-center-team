@@ -1,0 +1,26 @@
+{
+  "permissions": {},
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "policyTableName",
+      "environmentVariableName": "POLICY_TABLE_NAME"
+    },
+    {
+      "cloudFormationParameterName": "apiTeamGraphqlapiendpointoutput",
+      "environmentVariableName": "API_TEAM_GRAPHQLAPIENDPOINTOUTPUT"
+    },
+    {
+      "cloudFormationParameterName": "region",
+      "environmentVariableName": "REGION"
+    },
+    {
+      "cloudFormationParameterName": "accountId",
+      "environmentVariableName": "ACCOUNT_ID"
+    },
+    {
+      "cloudFormationParameterName": "env",
+      "environmentVariableName": "ENV"
+    }
+  ]
+}
