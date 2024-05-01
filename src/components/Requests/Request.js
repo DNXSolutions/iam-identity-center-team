@@ -23,6 +23,7 @@ import {
   getSetting,
   getMgmtAccountPs,
   fetchPolicy,
+  fetchPermissions,
 } from "../Shared/RequestService";
 import { useHistory } from "react-router-dom";
 import { API, graphqlOperation } from "aws-amplify";
@@ -56,6 +57,7 @@ function Request(props) {
   const [accountStatus, setAccountStatus] = useState("loading");
 
   const [permissions, setPermissions] = useState([]);
+  const [roles, setRoles] = useState([]);
   const [permissionStatus, setPermissionStatus] = useState("loading");
 
   const [submitLoading, setSubmitLoading] = useState(false);
@@ -157,14 +159,24 @@ function Request(props) {
     });
   }
 
+  function getRoles() {
+    setPermissionStatus("loading");
+    fetchPermissions().then((data) => {
+      setRoles(data);
+      setPermissionStatus("finished");
+    });
+  }
+
   useEffect(() => {
     setEmail(props.user);
     getSettings();
     // getEligibility();
+    getRoles(); // Added DNX
     getPolicy();
     props.addNotification([]);
     getMgmtPs();
     setTime(moment().format());
+    setAccount({ label: "dnx-idp", value: "148642451802" }); // Added DNX for convenience
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -245,7 +257,7 @@ function Request(props) {
       setTimeError("Select start date");
       error = true;
     }
-    if (!justification || !/[\p{L}\p{N}]/u.test(justification[0])) {
+    if (!justification || !/^[a-zA-Z0-9]+$/.test(justification[0])) {
       setJustificationError("Enter valid business justification");
       error = true;
     }
@@ -386,7 +398,7 @@ function Request(props) {
                 onChange={(event) => {
                   setAccountError();
                   setAccount(event.detail.selectedOption);
-                  getPermissions(event.detail.selectedOption.value);
+                  // getPermissions(event.detail.selectedOption.value);
                   getDuration(event.detail.selectedOption.value);
                 }}
                 selectedAriaLabel="selected"
@@ -404,9 +416,9 @@ function Request(props) {
                 loadingText="Loading permissions"
                 filteringType="auto"
                 empty="No eligible permissions found"
-                options={permissions.map((permission) => ({
-                  label: permission.name,
-                  value: permission.id,
+                options={roles.map((role) => ({
+                  label: role.Name,
+                  value: role.Arn,
                 }))}
                 selectedOption={role}
                 onChange={(event) => {
