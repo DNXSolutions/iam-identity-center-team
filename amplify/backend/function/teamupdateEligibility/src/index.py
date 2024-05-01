@@ -83,9 +83,9 @@ def handler(event, context):
     }
 
     print("Current: ", json.dumps(current_data["permissions"], sort_keys=True))
-    print("Updated: ", json.dumps(update_data, sort_keys=True))
+    print("Updated: ", json.dumps(update_data["permissions"], sort_keys=True))
 
-    if is_data_same(current_data["permissions"], update_data):
+    if is_data_same(current_data["permissions"], update_data["permissions"]):
         print("No changes detected, exiting...")
         return {"status": "no_change"}
 
