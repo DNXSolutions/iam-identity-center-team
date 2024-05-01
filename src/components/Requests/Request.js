@@ -119,7 +119,7 @@ function Request(props) {
   const getPolicy = () => {
     let args = {
       userId: props.userId,
-      groupIds: props.groupIds,
+      groupIds: props.groupIds,Œ
     };
     fetchPolicy(args).then((data) => {
       const subscription = API.graphql(
